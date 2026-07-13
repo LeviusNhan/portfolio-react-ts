@@ -1,9 +1,15 @@
+import Navbar from "../../components/layout/Navbar/Navbar";
+import SidebarSocial from "../../components/layout/SidebarSocial/SidebarSocial";
+import Hero from "../../components/sections/Hero/Hero";
+
 function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black">
-      <h1 className="text-5xl font-bold text-purple-500">
-        Tailwind v4 Working by levius 🚀
-      </h1>
+    <div className="min-h-screen bg-[#282C33] font-['Fira_Code'] text-white">
+      <div className="relative mx-auto w-full max-w-[1024px] px-4 lg:px-0">
+        <Navbar />
+        <SidebarSocial />
+        <Hero />
+      </div>
     </div>
   );
 }
