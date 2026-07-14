@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { FaGithub, FaLinkedin, FaFigma } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import i18n from "../../../i18n/i18n";
 
-const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Works", href: "#works" },
-    { label: "About-me", href: "#about-me" },
-    { label: "Contacts", href: "#contacts" },
-];
+// const navItems = [
+//     { label: "Home", href: "#home" },
+//     { label: "Works", href: "#works" },
+//     { label: "About-me", href: "#about-me" },
+//     { label: "Contacts", href: "#contacts" },
+// ];
+
+
 
 const socialLinks = [
     {
@@ -30,9 +34,16 @@ const socialLinks = [
 
 
 function Navbar() {
+     const { t } = useTranslation();
     const [open, setOpen] = useState(false);
     const [language, setLanguage] = useState("EN");
     const [openLanguage, setOpenLanguage] = useState(false);
+    const navItems=[
+{label:t("navbar.home"),href:"#home"},
+{label:t("navbar.works"),href:"#works"},
+{label:t("navbar.about"),href:"#about-me"},
+{label:t("navbar.contacts"),href:"#contacts"},
+]
     return (
         <header className="sticky top-0 z-50 bg-[#282C33]">
             <div className="navbarTheme mx-auto flex h-[61px] w-full max-w-[1024px] items-center justify-between px-4 lg:px-0">
@@ -63,18 +74,10 @@ hover:text-[#C778DD]
                             <li key={item.label}>
                                 <a
                                     href={item.href}
-                                    className="
-transition-all
-duration-300
-hover:tracking-wide
-"
+                                    className="transition-all duration-300 hover:tracking-wide"
                                 >
                                     <span className="text-[#C778DD]">#</span>
-                                    <span className="
-transition-all
-duration-300
-hover:tracking-wide
-">
+                                    <span className="transition-all duration-300 hover:tracking-wide">
                                         {item.label}
                                     </span>
                                 </a>
@@ -85,15 +88,7 @@ hover:tracking-wide
                     <div className="relative">
                         <button
                             onClick={() => setOpenLanguage((prev) => !prev)}
-                            className="
-flex
-items-center
-gap-1
-text-white
-transition-all
-duration-300
-hover:text-[#C778DD]
-hover:scale-105
+                            className="flex items-center gap-1 text-white transition-all duration-300 hover:text-[#C778DD] hover:scale-105
 "
                         >
                             {language}
@@ -107,29 +102,18 @@ hover:scale-105
 
                         {openLanguage && (
                             <div
-                                className={`
-    absolute
-    right-0
-    mt-2
-    w-20
-    overflow-hidden
-    border
-    border-[#ABB2BF]
-    bg-[#282C33]
-    shadow-lg
-    origin-top
-    transition-all
-    duration-300
-    ${openLanguage
+                                className={`absolute right-0 mt-2 w-20 overflow-hidden border border-[#ABB2BF] bg-[#282C33] shadow-lg origin-top transition-all duration-300
+                                 ${openLanguage
                                         ? "scale-y-100 opacity-100"
                                         : "pointer-events-none scale-y-95 opacity-0"
                                     }
-  `}
+                                 `}
                             >
                                 {["EN", "VI"].map((lang) => (
                                     <button
                                         key={lang}
                                         onClick={() => {
+                                            i18n.changeLanguage(lang.toLowerCase());
                                             setLanguage(lang);
                                             setOpenLanguage(false);
                                         }}

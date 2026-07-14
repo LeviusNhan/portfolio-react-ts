@@ -1,23 +1,25 @@
 import Avatar from "../../../assets/images/me.png";
 import Shape from "../../../assets/images/Logo.svg";
 import StatusCard from "../../ui/StatusCard";
+import { useTranslation } from "react-i18next";
 // import Dots from "../../../assets/images/dots.svg";
+
 function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="heroTheme mx-auto mt-0 flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
       {/* LEFT */}
       <div className="w-full max-w-[540px]">
         <h1 className="text-3xl md:text-4xl font-semibold leading-[42px] text-white">
-          Minh Nhàn is a{" "}
-          <span className="text-[#C778DD]">web designer</span>
+          {t("hero.title1")}
           <br />
-          and{" "}
-          <span className="text-[#C778DD]">front-end developer</span>
+          <span className="text-[#C778DD]">{t("hero.designer")}</span>
+          <br />
+          <span className="text-[#C778DD]">{t("hero.developer")}</span>
         </h1>
 
         <p className="mt-8 w-full max-w-[460px] text-base leading-7 text-[#ABB2BF]">
-          He crafts responsive websites where technologies
-          meet creativity
+         {t("hero.description")}
         </p>
 
         <button
@@ -33,7 +35,7 @@ function Hero() {
             self-start
           "
         >
-          Contact me !!
+          {t("hero.button")}
         </button>
       </div>
 

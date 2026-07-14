@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "home": "Home",
+    "works": "Works",
+    "about": "About-me",
+    "contacts": "Contacts"
+  },
+
+  "hero": {
+    "title1": "Minh Nhàn is a",
+    "designer": "web designer",
+    "title2": "and",
+    "developer": "front-end developer",
+
+    "description": "He crafts responsive websites where technologies meet creativity",
+
+    "button": "Contact me !!"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "navbar": {
+    "home": "Trang chủ",
+    "works": "Dự án",
+    "about": "Giới thiệu",
+    "contacts": "Liên hệ"
+  },
+
+  "hero": {
+    "title1": "Minh Nhàn là",
+
+    "designer": "nhà thiết kế web",
+
+    "title2": "và",
+
+    "developer": "lập trình viên Front-end",
+
+    "description": "Mình xây dựng các website hiện đại, responsive và tối ưu trải nghiệm người dùng.",
+
+    "button": "Liên hệ"
+  }
+}
