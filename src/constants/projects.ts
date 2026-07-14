@@ -14,7 +14,7 @@ export interface Project {
 
   source?: string;
 
-  isLive: boolean;
+  // isLive: boolean;
 }
 
 export const projects: Project[] = [
@@ -37,7 +37,7 @@ export const projects: Project[] = [
 
     source: "#",
 
-    isLive: true,
+    // isLive: true,
   },
 
   {
@@ -57,7 +57,7 @@ export const projects: Project[] = [
 
     live: "#",
 
-    isLive: true,
+    // isLive: true,
   },
 
   {
@@ -76,6 +76,6 @@ export const projects: Project[] = [
 
     live: "#",
 
-    isLive: true,
+    // isLive: true,
   },
 ];

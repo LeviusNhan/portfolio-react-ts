@@ -12,7 +12,7 @@ type Props = {
 
   source?: string;
 
-  isLive: boolean;
+  // isLive: boolean;
 };
 
 function ProjectCard({
@@ -22,7 +22,7 @@ function ProjectCard({
   description,
   live,
   source,
-  isLive,
+  // isLive,
 }: Props) {
   return (
     <article
