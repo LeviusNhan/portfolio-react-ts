@@ -92,7 +92,7 @@ function About() {
         >
 
 
-          <Dot 
+          <Dot
             className="
               absolute 
               left-0 
@@ -103,7 +103,7 @@ function About() {
           />
 
 
-          <Dot 
+          <Dot
             className="
               absolute 
               right-0 
