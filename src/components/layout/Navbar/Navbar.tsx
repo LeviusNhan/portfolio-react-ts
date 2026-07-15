@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaFigma } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import i18n from "../../../i18n/i18n";
 import { motion } from "motion/react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 // const navItems = [
 //     { label: "Home", href: "#home" },
 //     { label: "Works", href: "#works" },
