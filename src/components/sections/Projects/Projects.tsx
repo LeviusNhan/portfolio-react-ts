@@ -9,10 +9,11 @@ function Projects() {
       id="projects"
       className="projectsTheme py-28"
     >
-      <SectionTitle
+      {/* <SectionTitle
         title="projects"
         action="View all"
-      />
+      /> */}
+      <SectionTitle title="projects" action="View all" />
 
       <div
         className="

@@ -1,0 +1,48 @@
+html,
+body {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring,
+.cursor-glow {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 999px;
+
+  background: white;
+}
+
+.cursor-ring {
+  width: 28px;
+  height: 28px;
+
+  border: 2px solid #abb2bf;
+
+  border-radius: 999px;
+}
+
+.cursor-glow {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 999px;
+
+  background: rgba(199, 120, 221, 0.22);
+
+  filter: blur(18px);
+}
