@@ -8,19 +8,35 @@ function About() {
   return (
     <section
       id="about"
-      className="aboutTheme py-24"
+      className="aboutTheme py-24 overflow-hidden"
     >
       <SectionTitle title="about-me" />
 
-      <div className="mt-14 flex flex-col-reverse items-center gap-16 lg:flex-row lg:justify-between">
+
+      <div className="
+        mt-14 
+        flex 
+        flex-col-reverse 
+        items-center 
+        gap-16 
+        lg:flex-row 
+        lg:justify-between
+      ">
+
 
         {/* LEFT */}
 
-        <div className="max-w-[520px]">
+        <div
+          className="
+            max-w-[520px]
+            animate-[fadeInLeft_0.8s_ease]
+          "
+        >
 
           <p className="leading-8 text-[#ABB2BF]">
             Hello, I'm Minh Nhàn!
           </p>
+
 
           <p className="mt-8 leading-8 text-[#ABB2BF]">
             I'm a Front-end Developer from Ho Chi Minh City, Vietnam.
@@ -28,11 +44,13 @@ function About() {
             with React, TypeScript and Tailwind CSS.
           </p>
 
+
           <p className="mt-8 leading-8 text-[#ABB2BF]">
             I enjoy transforming ideas into real products and continuously
             improving my skills by learning new technologies and best
             practices.
           </p>
+
 
           <button
             className="
@@ -42,35 +60,96 @@ function About() {
               px-5
               py-2
               text-white
-              transition
+
+              transition-all
               duration-300
+
               hover:bg-[#C778DD]/20
+              hover:shadow-[0_0_20px_#C778DD]
+              hover:-translate-y-1
             "
           >
             Read more →
           </button>
 
+
         </div>
+
+
 
         {/* RIGHT */}
 
-        <div className="relative h-[500px] w-full max-w-[420px]">
 
-          <Dot className="absolute left-0 top-12" />
+        <div
+          className="
+            relative 
+            h-[500px] 
+            w-full 
+            max-w-[420px]
 
-          <Dot className="absolute right-0 bottom-24" />
+            animate-[fadeInRight_0.8s_ease]
+          "
+        >
+
+
+          <Dot 
+            className="
+              absolute 
+              left-0 
+              top-12
+
+              animate-pulse
+            "
+          />
+
+
+          <Dot 
+            className="
+              absolute 
+              right-0 
+              bottom-24
+
+              animate-pulse
+            "
+          />
+
+
 
           <img
             src={Avatar}
             alt="Minh Nhàn"
-            className="absolute bottom-0 right-0 w-full"
+
+            className="
+              absolute 
+              bottom-0 
+              right-0 
+              w-full
+
+              transition
+              duration-500
+
+              hover:scale-105
+            "
           />
+
+
 
           <img
             src={Shape}
             alt=""
-            className="absolute left-0 top-36 w-[95px]"
+
+            className="
+              absolute 
+              left-0 
+              top-36 
+              w-[95px]
+
+              animate-bounce
+              [animation-duration:3s]
+            "
           />
+
+
 
           <div
             className="
@@ -80,14 +159,19 @@ function About() {
               h-[1px]
               w-full
               bg-[#C778DD]
+
+              animate-pulse
             "
           />
 
+
         </div>
+
 
       </div>
     </section>
   );
 }
+
 
 export default About;
