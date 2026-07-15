@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaFigma } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import i18n from "../../../i18n/i18n";
 import { motion } from "motion/react";
-
+import { Link, useLocation } from "react-router-dom";
 // const navItems = [
 //     { label: "Home", href: "#home" },
 //     { label: "Works", href: "#works" },
@@ -35,38 +35,38 @@ const socialLinks = [
 
 
 function Navbar() {
-     const { t } = useTranslation();
+    const { t } = useTranslation();
     const [open, setOpen] = useState(false);
     const [language, setLanguage] = useState("EN");
     const [openLanguage, setOpenLanguage] = useState(false);
-    const navItems=[
-{label:t("navbar.home"),href:"#home"},
-{label:t("navbar.works"),href:"#works"},
-{label:t("navbar.about"),href:"#about-me"},
-{label:t("navbar.contacts"),href:"#contacts"},
-]
+    const navItems = [
+        { label: t("navbar.home"), href: "/" },
+        { label: t("navbar.works"), href: "#works" },
+        { label: t("navbar.about"), href: "#about-me" },
+        { label: t("navbar.contacts"), href: "/contact" },
+    ]
     return (
         <motion.header
-                    initial={{
-                        opacity: 0,
-                        y: -30,
-                        filter: "blur(10px)",
-                    }}
-                    animate={{
-                    opacity: 1,
-                    y: 0,
-                    filter: "blur(0px)",
-                     }}
-                    transition={{
-                        duration: 0.8,
-                        ease: "easeOut",
-                    }}
-                    className="sticky top-0 z-50 bg-[#282C33]"
+            initial={{
+                opacity: 0,
+                y: -30,
+                filter: "blur(10px)",
+            }}
+            animate={{
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+            }}
+            transition={{
+                duration: 0.8,
+                ease: "easeOut",
+            }}
+            className="sticky top-0 z-50 bg-[#282C33]"
         >
 
-        <div className="navbarTheme mx-auto flex h-[61px] w-full max-w-[1024px] items-center justify-between px-4 lg:px-0">
+            <div className="navbarTheme mx-auto flex h-[61px] w-full max-w-[1024px] items-center justify-between px-4 lg:px-0">
                 {/* Logo */}
-                <motion.a
+                <motion.div
                     initial={{
                         opacity: 0,
                         x: -30,
@@ -76,90 +76,99 @@ function Navbar() {
                         x: 0,
                     }}
                     transition={{
-                        delay: 0.25,
-                        duration: 0.5,
+                        delay: .25,
+                        duration: .5,
                     }}
-                    href="/"
-                        className="
-                        group 
-                        flex
-                        items-center
-                        gap-2
-                        text-base
-                        font-bold
-                        text-white
-                        transition-all
-                        duration-300
-                        hover:scale-105
-                        hover:text-[#C778DD]
-                    "
                 >
-                <motion.span
-                    whileHover={{
-                        rotate: 180,
-                        scale: 1.15,
-                    }}
-                    transition={{
-                        duration: 0.4,
-                    }}
-                    className="text-[#C778DD]"
-                > ■
-                </motion.span>
-                    Levius
-                </motion.a>
+                    <Link
+                        to="/"
+                        className="
+        group
+        flex
+        items-center
+        gap-2
+        text-base
+        font-bold
+        text-white
+        transition-all
+        duration-300
+        hover:scale-105
+        hover:text-[#C778DD]
+        "
+                    >
+                        <motion.span
+                            whileHover={{
+                                rotate: 180,
+                                scale: 1.15,
+                            }}
+                            transition={{
+                                duration: .4,
+                            }}
+                            className="text-[#C778DD]"
+                        >
+                            ■
+                        </motion.span>
+
+                        Levius
+                    </Link>
+                </motion.div>
 
                 {/* Desktop */}
                 <nav className="hidden items-center gap-8 lg:flex">
-                <motion.ul
-                    className="flex items-center gap-8"
-                    initial="hidden"
-                    animate="show"
-                    variants={{
-                        hidden: {},
-                        show: {
-                        transition: {
-                            staggerChildren: 0.12,
-                            delayChildren: 0.45,
-                        },
-                        },
-                    }}
-                >
-                {navItems.map((item) => (
-                <motion.li
-                        key={item.label}
+                    <motion.ul
+                        className="flex items-center gap-8"
+                        initial="hidden"
+                        animate="show"
                         variants={{
-                            hidden: {
-                            opacity: 0,
-                            y: -12,
-                            filter: "blur(6px)",
-                            },
+                            hidden: {},
                             show: {
-                            opacity: 1,
-                            y: 0,
-                            filter: "blur(0px)",
+                                transition: {
+                                    staggerChildren: 0.12,
+                                    delayChildren: 0.45,
+                                },
                             },
                         }}
-                >
-                <motion.a 
-                        whileHover={{
-                            y: -2,
-                        }}
-                        transition={{
-                            duration: 0.2,
-                        }}
-                        href={item.href}
-                        className="group transition-all duration-300 hover:tracking-wide"
-                >
-                        <span className="text-[#C778DD]">#</span>
-                        <span className="transition-all duration-300 hover:tracking-wide">
-                            {item.label}
-                        </span>
-                </motion.a>
-            </motion.li>
-))}
-        </motion.ul>
-{/* Dropdown EN/VI */}
-                <motion.div
+                    >
+                        {navItems.map((item) => (
+                            <motion.li
+                                key={item.label}
+                                variants={{
+                                    hidden: {
+                                        opacity: 0,
+                                        y: -12,
+                                        filter: "blur(6px)",
+                                    },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                        filter: "blur(0px)",
+                                    },
+                                }}
+                            >
+                                <motion.div
+                                    whileHover={{
+                                        y: -2,
+                                    }}
+                                    transition={{
+                                        duration: 0.2,
+                                    }}
+                                >
+                                    <Link
+                                        to={item.href}
+                                        className="group transition-all duration-300 hover:tracking-wide"
+                                    >
+                                        <span className="text-[#C778DD]">#</span>
+
+                                        <span className="transition-all duration-300 hover:tracking-wide">
+                                            {item.label}
+                                        </span>
+                                    </Link>
+                                </motion.div>
+                            </motion.li>
+                        ))}
+                    </motion.ul>
+                    {/* Dropdown EN/VI */}
+                    <motion.div
                         className="relative"
                         initial={{
                             opacity: 0,
@@ -173,7 +182,7 @@ function Navbar() {
                             delay: 0.9,
                             duration: 0.45,
                         }}
-                >
+                    >
                         <button
                             onClick={() => setOpenLanguage((prev) => !prev)}
                             className="flex items-center gap-1 text-white transition-all duration-300 hover:text-[#C778DD] hover:scale-105"
@@ -222,7 +231,7 @@ function Navbar() {
                                 ))}
                             </div>
                         )}
-                   </motion.div>
+                    </motion.div>
                 </nav>
 
                 {/* Tablet + Mobile */}
@@ -256,8 +265,8 @@ function Navbar() {
                     <ul className="flex flex-col gap-6 px-6 py-6">
                         {navItems.map((item) => (
                             <li key={item.label}>
-                                <a
-                                    href={item.href}
+                                <Link
+                                    to={item.href}
                                     onClick={() => setOpen(false)}
                                     className="
                                     text-lg
@@ -267,8 +276,8 @@ function Navbar() {
                                     "
                                 >
                                     <span className="text-[#C778DD]">#</span>
-                                   <span className="relative text-[#ABB2BF] transition-colors duration-300 hover:text-white group">{item.label}<span
-                                    className="
+                                    <span className="relative text-[#ABB2BF] transition-colors duration-300 hover:text-white group">{item.label}<span
+                                        className="
                                     absolute
                                     left-0
                                     -bottom-1
@@ -279,9 +288,9 @@ function Navbar() {
                                     duration-300
                                     group-hover:w-full
                                     "
-                                />
-                                </span>
-                                </a>
+                                    />
+                                    </span>
+                                </Link>
                             </li>
                         ))}
 

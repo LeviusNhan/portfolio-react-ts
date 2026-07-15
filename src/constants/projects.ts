@@ -1,6 +1,7 @@
 import html_Css from "../assets/images/html_Css.jpg";
 import react_Ts from "../assets/images/react_Ts.jpg";
 import tailwindSs from "../assets/images/taiwindss.jpg";
+import rMemd from "../assets/images/rMemd.jpg";
 export interface Project {
   id: number;
   image: string;
@@ -74,7 +75,7 @@ export const projects: Project[] = [
 
    {
     id: 4,
-    image: tailwindSs,
+    image: rMemd,
 
     technologies: [
       "Structure projects"

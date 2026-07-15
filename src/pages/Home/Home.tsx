@@ -7,21 +7,24 @@ import Skills from "../../components/sections/Skills/Skills";
 import About from "../../components/sections/About/About";
 import Contacts from "../../components/sections/Contacts/Contacts";
 import Footer from "../../components/layout/Footer/Footer";
+import PageTransition from "../../components/common/PageTransition/PageTransition";
 function Home() {
   return (
-    <div className="min-h-screen bg-[#282C33] font-['Fira_Code'] text-white">
-      <div className="relative mx-auto w-full max-w-[1024px] px-4 lg:px-0">
-        <Navbar />
-        <SidebarSocial />
-        <Hero />
-        <Quote />
-        <Projects />
-        <Skills />
-        <About />
-        <Contacts />
-        <Footer />
+    <PageTransition>
+      <div className="min-h-screen bg-[#282C33] font-['Fira_Code'] text-white">
+        <div className="relative mx-auto w-full max-w-[1024px] px-4 lg:px-0">
+          <Navbar />
+          <SidebarSocial />
+          <Hero />
+          <Quote />
+          <Projects />
+          <Skills />
+          <About />
+          <Contacts />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </PageTransition>
   );
 }
 
