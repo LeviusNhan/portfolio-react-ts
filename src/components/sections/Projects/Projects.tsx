@@ -1,6 +1,5 @@
 import SectionTitle from "../../common/SectionTitle";
 import ProjectCard from "../../ui/ProjectCard";
-
 import { projects } from "../../../constants/projects";
 
 function Projects() {

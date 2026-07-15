@@ -1,5 +1,6 @@
-import hero from "../assets/images/hero.png";
-
+import html_Css from "../assets/images/html_Css.jpg";
+import react_Ts from "../assets/images/react_Ts.jpg";
+import tailwindSs from "../assets/images/taiwindss.jpg";
 export interface Project {
   id: number;
   image: string;
@@ -20,62 +21,69 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    image: hero,
+    image: html_Css,
 
     technologies: [
       "HTML",
-      "SCSS",
-      "Python",
-      "Flask",
+      "CSS"
     ],
 
-    title: "ChertNodes",
+    title: "Html, CSS, SCSS",
 
-    description: "Minecraft servers hosting",
+    description: "Portfolio project with HTML, CSS and SCSS",
 
-    live: "#",
+    live: "https://github.com/LeviusNhan/portfolio-react-ts/tree/develop",
 
     source: "#",
-
-    // isLive: true,
   },
 
   {
     id: 2,
-    image: hero,
+    image: react_Ts,
 
     technologies: [
       "React",
+      "TypeScript",
       "Express",
-      "Discord.js",
       "Node.js",
     ],
 
-    title: "ProtectX",
+    title: "Javascripts Ecosystem",
 
-    description: "Discord anti-crash bot",
+    description: "Portfolio project with React, TypeScript, Express and Node.js",
 
-    live: "#",
-
-    // isLive: true,
+    live: "https://github.com/LeviusNhan/portfolio-react-ts/tree/develop",
   },
 
   {
     id: 3,
-    image: hero,
+    image: tailwindSs,
 
     technologies: [
+      "TailwindSs",
       "CSS",
-      "Express",
-      "Node.js",
+      "Boostrap 5",
     ],
 
-    title: "Kahoot Answers Viewer",
+    title: "CSS Ecosystem",
 
-    description: "Get answers to your kahoot quiz",
+    description: "Portfolio project with TailwindSs, CSS and Boostrap 5",
 
-    live: "#",
+    live: "https://github.com/LeviusNhan/portfolio-react-ts/tree/develop",
+  },
 
-    // isLive: true,
+   {
+    id: 4,
+    image: tailwindSs,
+
+    technologies: [
+      "Structure projects"
+    ],
+
+    title: "My README.md",
+
+    description: "Portfolio project with my README.md. Click to read all",
+
+    live: "https://github.com/LeviusNhan/portfolio-react-ts/blob/develop/README.md",
   },
 ];

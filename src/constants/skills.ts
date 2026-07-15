@@ -2,33 +2,36 @@ export const skills = [
   {
     title: "Languages",
     items: [
-      "TypeScript Lua",
-      "Python JavaScript",
+      "React",
+      "TypeScripts",
+      "Php JavaScript",
     ],
   },
 
   {
     title: "Databases",
     items: [
-      "SQLite PostgreSQL",
-      "Mongo",
+      "SQL Server PostgreSQL",
+      "MongoDB MySQL",
     ],
   },
 
   {
     title: "Tools",
     items: [
-      "VSCode Neovim Linux",
-      "Figma XFCE Arch",
-      "Git Font Awesome",
+      "VSCode Window",
+      "Figma AdobeXD",
+      "GitHub GitLab",
+      "Postman Motion-React",
     ],
   },
 
   {
     title: "Others",
     items: [
-      "HTML CSS EJS SCSS",
-      "REST Jinja",
+      "HTML CSS EJS6 SCSS",
+      "REST API",
+      "Vite Vercel",
     ],
   },
 
@@ -36,8 +39,7 @@ export const skills = [
     title: "Frameworks",
     items: [
       "React Vue",
-      "Disnake Discord.js",
-      "Flask Express.js",
+      "Express.js NODE.js",
     ],
   },
 ];
