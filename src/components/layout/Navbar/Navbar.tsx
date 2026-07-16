@@ -41,8 +41,8 @@ function Navbar() {
     const [openLanguage, setOpenLanguage] = useState(false);
     const navItems = [
         { label: t("navbar.home"), href: "/" },
-        { label: t("navbar.works"), href: "#works" },
-        { label: t("navbar.about"), href: "#about-me" },
+        { label: t("navbar.works"), href: "/works" },
+        { label: t("navbar.about"), href: "/about" },
         { label: t("navbar.contacts"), href: "/contact" },
     ]
     return (

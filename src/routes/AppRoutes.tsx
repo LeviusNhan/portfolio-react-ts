@@ -9,6 +9,8 @@ import { AnimatePresence } from "motion/react";
 
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
+import Works from "../pages/Works";
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -28,11 +30,18 @@ function AnimatedRoutes() {
                     path="/contact"
                     element={<Contact />}
                 />
+               <Route
+                    path="/about"
+                    element={<About />}
+                />
+                <Route
+                    path="/works"
+                    element={<Works />}
+                />
             </Routes>
         </AnimatePresence>
     );
 }
-
 export default function AppRoutes() {
     return (
         <BrowserRouter>
