@@ -131,7 +131,7 @@ function CaseStudy() {
       </motion.div>
 
       <div className="mt-32 space-y-40">
-        {screens.map((screen, index) => (
+        {screens.map((screen) => (
   <motion.div
     key={screen.step}
     initial={{
