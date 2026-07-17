@@ -3,16 +3,13 @@ import Shape from "../../../assets/images/Logo.svg";
 
 import Dot from "../../common/Dot";
 import SectionTitle from "../../common/SectionTitle";
-
+import { Link } from "react-router-dom";
 function About() {
   return (
     <section
       id="about"
-      className="aboutTheme py-24 overflow-hidden"
-    >
+      className="aboutTheme py-24 overflow-hidden">
       <SectionTitle title="about-me" />
-
-
       <div className="
         mt-14 
         flex 
@@ -32,26 +29,19 @@ function About() {
             animate-[fadeInLeft_0.8s_ease]
           "
         >
-
           <p className="leading-8 text-[#ABB2BF]">
             Hello, I'm Minh Nhàn!
           </p>
-
-
           <p className="mt-8 leading-8 text-[#ABB2BF]">
             I'm a Front-end Developer from Ho Chi Minh City, Vietnam.
             I build responsive, modern and user-friendly web applications
             with React, TypeScript and Tailwind CSS.
           </p>
-
-
           <p className="mt-8 leading-8 text-[#ABB2BF]">
             I enjoy transforming ideas into real products and continuously
             improving my skills by learning new technologies and best
             practices.
           </p>
-
-
           <button
             className="
               mt-10
@@ -69,17 +59,14 @@ function About() {
               hover:-translate-y-1
             "
           >
-            Read more →
+            <Link to="/about">
+              Read more →
+            </Link>
           </button>
-
-
         </div>
 
 
-
         {/* RIGHT */}
-
-
         <div
           className="
             relative 
@@ -90,8 +77,6 @@ function About() {
             animate-[fadeInRight_0.8s_ease]
           "
         >
-
-
           <Dot
             className="
               absolute 
@@ -101,8 +86,6 @@ function About() {
               animate-pulse
             "
           />
-
-
           <Dot
             className="
               absolute 
@@ -112,9 +95,6 @@ function About() {
               animate-pulse
             "
           />
-
-
-
           <img
             src={Avatar}
             alt="Minh Nhàn"
@@ -131,9 +111,6 @@ function About() {
               hover:scale-105
             "
           />
-
-
-
           <img
             src={Shape}
             alt=""
@@ -148,9 +125,6 @@ function About() {
               [animation-duration:3s]
             "
           />
-
-
-
           <div
             className="
               absolute
@@ -163,15 +137,9 @@ function About() {
               animate-pulse
             "
           />
-
-
         </div>
-
-
       </div>
     </section>
   );
 }
-
-
 export default About;

@@ -3,25 +3,25 @@ import SectionTitle from "../../common/SectionTitle";
 
 const timeline = [
   {
-    year: "2022",
+    year: "2021",
     title: "Started Programming",
     description:
       "Started learning C and basic programming concepts before moving to web development.",
   },
   {
-    year: "2023",
+    year: "2022",
     title: "Frontend Journey",
     description:
       "Learned HTML, CSS, JavaScript and built my first responsive websites.",
   },
   {
-    year: "2024",
+    year: "2023 - 2025",
     title: "React & TypeScript",
     description:
       "Focused on React, TypeScript, TailwindCSS and modern UI/UX development.",
   },
   {
-    year: "2025",
+    year: "2026 - Present",
     title: "Portfolio & Freelance",
     description:
       "Building premium interfaces, improving animations and taking freelance projects.",
@@ -31,13 +31,9 @@ const timeline = [
 function AboutTimeline() {
   return (
     <section className="mx-auto mt-36 max-w-[1120px] px-5">
-
       <SectionTitle title="timeline" />
-
       <div className="relative mt-16">
-
         {/* Main Line */}
-
         <div
           className="
             absolute
@@ -50,7 +46,6 @@ function AboutTimeline() {
         />
 
         {/* Glow */}
-
         <motion.div
           initial={{
             height: 0,
@@ -75,7 +70,6 @@ function AboutTimeline() {
         />
 
         <div className="space-y-16">
-
           {timeline.map((item, index) => (
             <motion.div
               key={item.year}
@@ -97,7 +91,6 @@ function AboutTimeline() {
               className="relative flex gap-10"
             >
               {/* Dot */}
-
               <motion.div
                 whileHover={{
                   scale: 1.3,
@@ -120,7 +113,6 @@ function AboutTimeline() {
               />
 
               {/* Card */}
-
               <motion.div
                 whileHover={{
                   y: -8,

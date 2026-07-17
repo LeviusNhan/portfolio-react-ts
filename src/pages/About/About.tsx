@@ -9,7 +9,7 @@ import AboutAboutTimeline from "../../components/sections/About/AboutTimeline";
 
 function About() {
   return (
-    <div className="text-white">
+    <div className="text-white mx-auto w-full max-w-[1140px] px-4 lg:px-6">
       <Navbar />
 
       <SidebarSocial />

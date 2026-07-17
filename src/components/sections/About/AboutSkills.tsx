@@ -39,11 +39,8 @@ const skills = [
 function AboutSkills() {
   return (
     <section className="mx-auto mt-36 max-w-[1120px] px-5">
-
       <SectionTitle title="skills" />
-
       <div className="mt-12 grid gap-6 md:grid-cols-3 w-full max-w-[1024px] mx-auto">
-
         {skills.map((group, index) => (
           <motion.div
             key={group.title}
@@ -75,9 +72,7 @@ function AboutSkills() {
             <h3 className="mb-5 text-xl font-semibold text-white">
               {group.title}
             </h3>
-
             <div className="flex flex-wrap gap-2">
-
               {group.items.map((item) => (
                 <span
                   key={item}

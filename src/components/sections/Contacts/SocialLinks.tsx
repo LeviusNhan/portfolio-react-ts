@@ -16,25 +16,25 @@ const socials = [
     title: "Github",
     subtitle: "View my repositories",
     icon: FaGithub,
-    href: "https://github.com/your-github",
+    href: "https://github.com/LeviusNhan",
   },
   {
     title: "LinkedIn",
     subtitle: "Let's connect",
     icon: FaLinkedin,
-    href: "https://linkedin.com/in/your-linkedin",
+    href: "https://www.linkedin.com/in/leviusnhan-fe1203/",
   },
   {
     title: "Facebook",
     subtitle: "Personal profile",
     icon: FaFacebook,
-    href: "https://facebook.com/your-facebook",
+    href: "https://www.facebook.com/elias.otis.2025",
   },
   {
     title: "Download CV",
     subtitle: "PDF Resume",
     icon: FileText,
-    href: "/cv.pdf",
+    href: "/files/minhnhan-resume.pdf",
   },
 ];
 

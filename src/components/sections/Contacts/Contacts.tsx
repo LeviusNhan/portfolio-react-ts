@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import SectionTitle from "../../common/SectionTitle";
 import ContactCard from "../../ui/ContactCard";
 import { contacts } from "../../../constants/contacts";
-
+import { Link } from "react-router-dom";
 
 function Contacts() {
 
@@ -13,10 +13,7 @@ function Contacts() {
       id="contacts"
       className="contactsTheme py-24 overflow-hidden"
     >
-
       <SectionTitle title="contacts" />
-
-
       <div
         className="
           mt-12 
@@ -29,35 +26,27 @@ function Contacts() {
         "
       >
 
-
-
         {/* LEFT */}
-
-
         <motion.div
 
           className="
             max-w-[520px]
           "
 
-
           initial={{
             opacity:0,
             x:-80
           }}
-
 
           whileInView={{
             opacity:1,
             x:0
           }}
 
-
           viewport={{
             once:true,
             amount:0.3
           }}
-
 
           transition={{
             duration:0.8,
@@ -65,8 +54,6 @@ function Contacts() {
           }}
 
         >
-
-
           <p className="leading-8 text-[#ABB2BF]">
 
             I'm interested in freelance opportunities.
@@ -74,21 +61,31 @@ function Contacts() {
             questions, don't hesitate to contact me.
 
           </p>
+             <button
+            className="
+              mt-10
+              border
+              border-[#C778DD]
+              px-5
+              py-2
+              text-white
 
+              transition-all
+              duration-300
+
+              hover:bg-[#C778DD]/20
+              hover:shadow-[0_0_20px_#C778DD]
+              hover:-translate-y-1
+            "
+          >
+            <Link to="/contact">
+              Read more →
+            </Link>
+          </button>
 
         </motion.div>
-
-
-
-
-
-
         {/* RIGHT */}
-
-
         <motion.div
-
-
           initial={{
             opacity:0,
             x:80,
@@ -114,15 +111,11 @@ function Contacts() {
             ease:"easeOut"
           }}
 
-
-
           whileHover={{
 
             y:-8
 
           }}
-
-
 
           className="
             border
@@ -137,8 +130,6 @@ function Contacts() {
             hover:border-[#C778DD]
             hover:shadow-[0_0_25px_#C778DD40]
           "
-
-
         >
 
 
@@ -149,102 +140,50 @@ function Contacts() {
               text-white
             "
           >
-
             Message me here
 
           </h3>
-
-
-
-
-
           <div
             className="
               space-y-4
             "
           >
-
-
             {
               contacts.map((item,index)=>(
-
-
                 <motion.div
-
-
                   key={item.value}
-
-
                   initial={{
                     opacity:0,
                     x:50
                   }}
-
-
                   whileInView={{
                     opacity:1,
                     x:0
                   }}
-
-
                   viewport={{
                     once:true
                   }}
-
-
                   transition={{
-
                     duration:0.5,
-
                     delay:index * 0.15
-
                   }}
-
-
                   whileHover={{
-
                     x:8
-
                   }}
-
-
                 >
-
-
                   <ContactCard
-
                     icon={item.icon}
-
                     value={item.value}
-
                     href={item.href}
-
                   />
-
-
                 </motion.div>
-
-
               ))
             }
-
-
           </div>
-
-
-
         </motion.div>
-
-
-
       </div>
-
-
-
     </section>
-
   );
-
 }
 
 

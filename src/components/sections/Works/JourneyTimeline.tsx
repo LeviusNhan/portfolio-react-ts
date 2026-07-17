@@ -5,14 +5,12 @@ import {
     useSpring,
     useTransform,
 } from "motion/react";
-
 import { useRef } from "react";
-
 import SectionTitle from "../../common/SectionTitle";
 
 const timeline = [
     {
-        year: "2022",
+        year: "2021",
         title: "The Beginning",
         subtitle: "Learning Programming",
         description:
@@ -20,7 +18,7 @@ const timeline = [
         background: "BEGIN",
     },
     {
-        year: "2023",
+        year: "2022",
         title: "Discovering The Web",
         subtitle: "HTML • CSS • JavaScript",
         description:
@@ -28,7 +26,7 @@ const timeline = [
         background: "WEB",
     },
     {
-        year: "2024",
+        year: "2023 - 2025",
         title: "Modern Front-end",
         subtitle: "React • TypeScript",
         description:
@@ -36,7 +34,7 @@ const timeline = [
         background: "REACT",
     },
     {
-        year: "2025",
+        year: "2026 - Present",
         title: "Creative Development",
         subtitle: "Motion • UX • Performance",
         description:
@@ -62,19 +60,8 @@ function JourneyTimeline() {
     );
 
     return (
-        <section
-            ref={sectionRef}
-            className="
-        relative
-        mx-auto
-        max-w-[1120px]
-        overflow-hidden
-        px-5
-        py-40
-      "
-        >
+        <section ref={sectionRef} className=" relative mx-auto max-w-[1120px] overflow-hidden px-5 py-40">
             {/* Background Glow */}
-
             <motion.div
                 animate={{
                     scale: [1, 1.15, 1],
@@ -85,17 +72,17 @@ function JourneyTimeline() {
                     repeat: Infinity,
                 }}
                 className="
-          absolute
-          left-1/2
-          top-0
-          h-[700px]
-          w-[700px]
-          -translate-x-1/2
-          rounded-full
-          bg-[#C778DD]/10
-          blur-[170px]
-        "
-            />
+                    absolute
+                    left-1/2
+                    top-0
+                    h-[700px]
+                    w-[700px]
+                    -translate-x-1/2
+                    rounded-full
+                    bg-[#C778DD]/10
+                    blur-[170px]
+                    "
+                />
 
             {/* Floating Square */}
 
@@ -109,15 +96,15 @@ function JourneyTimeline() {
                     repeat: Infinity,
                 }}
                 className="
-          absolute
-          right-12
-          top-32
-          h-10
-          w-10
-          border
-          border-[#C778DD]/20
-        "
-            />
+                    absolute
+                    right-12
+                    top-32
+                    h-10
+                    w-10
+                    border
+                    border-[#C778DD]/20
+                    "
+                />
 
             <motion.div
                 animate={{
@@ -129,56 +116,53 @@ function JourneyTimeline() {
                     repeat: Infinity,
                 }}
                 className="
-          absolute
-          bottom-20
-          left-10
-          h-7
-          w-7
-          border
-          border-cyan-400/20
-        "
+                    absolute
+                    bottom-20
+                    left-10
+                    h-7
+                    w-7
+                    border
+                    border-cyan-400/20
+                    "
             />
 
             <SectionTitle title="journey" />
-
             <div className="relative mt-32">
 
                 {/* Base Line */}
-
                 <div
-                    className="
-            absolute
-            left-1/2
-            top-0
-            bottom-0
-            w-px
-            -translate-x-1/2
-            bg-[#343941]
-          "
+                className="
+                    absolute
+                    left-1/2
+                    top-0
+                    bottom-0
+                    w-px
+                    -translate-x-1/2
+                    bg-[#343941]
+                "
                 />
 
                 {/* Animated Line */}
-
                 <motion.div
                     style={{
                         scaleY: lineScale,
                         transformOrigin: "top",
                     }}
                     className="
-            absolute
-            left-1/2
-            top-0
-            bottom-0
-            w-px
-            -translate-x-1/2
+                    absolute
+                    left-1/2
+                    top-0
+                    bottom-0
+                    w-px
+                    -translate-x-1/2
 
-            bg-gradient-to-b
-            from-[#C778DD]
-            via-fuchsia-400
-            to-cyan-300
+                    bg-gradient-to-b
+                    from-[#C778DD]
+                    via-fuchsia-400
+                    to-cyan-300
 
-            shadow-[0_0_20px_#C778DD]
-          "
+                    shadow-[0_0_20px_#C778DD]
+                "
                 />
 
                 {/* Laser */}
@@ -192,20 +176,18 @@ function JourneyTimeline() {
                         ),
                     }}
                     className="
-            absolute
-            left-1/2
-            z-20
-            h-24
-            w-1
-            -translate-x-1/2
-
-            bg-gradient-to-b
-            from-transparent
-            via-white
-            to-transparent
-
-            blur-sm
-          "
+                    absolute
+                    left-1/2
+                    z-20
+                    h-24
+                    w-1
+                    -translate-x-1/2
+                    bg-gradient-to-b
+                    from-transparent
+                    via-white
+                    to-transparent
+                    blur-sm
+                "
                 />
 
                 <div className="space-y-52">
@@ -259,12 +241,12 @@ function JourneyTimeline() {
                                     ease: "easeOut",
                                 }}
                                 className={`
-        relative
-        flex
-        items-center
+                                    relative
+                                    flex
+                                    items-center
 
-        ${isLeft ? "justify-start" : "justify-end"}
-      `}
+                                    ${isLeft ? "justify-start" : "justify-end"}
+                                `}
                             >
                                 <motion.div
                                     animate={{
@@ -280,15 +262,15 @@ function JourneyTimeline() {
                                         repeat: Infinity,
                                     }}
                                     className="
-          absolute
-          left-1/2
-          z-20
-          h-5
-          w-5
-          -translate-x-1/2
-          rounded-full
-          bg-[#C778DD]
-        "
+                                        absolute
+                                        left-1/2
+                                        z-20
+                                        h-5
+                                        w-5
+                                        -translate-x-1/2
+                                        rounded-full
+                                        bg-[#C778DD]
+                                        "
                                 />
                                 <motion.h2
                                     initial={{
@@ -301,24 +283,19 @@ function JourneyTimeline() {
                                         once: true,
                                     }}
                                     className="
-          pointer-events-none
-          absolute
-          left-1/2
-          -translate-x-1/2
-
-          text-[180px]
-
-          font-black
-
-          tracking-[20px]
-
-          text-white
-
-          select-none
-        "
+                                        pointer-events-none
+                                        absolute
+                                        left-1/2
+                                        -translate-x-1/2
+                                        text-[180px]
+                                        font-black
+                                        tracking-[20px]
+                                        text-white
+                                        select-none
+                                        "
                                 >
                                     {item.background}
-                                </motion.h2>
+                                    </motion.h2>
                                 <motion.div
                                     onMouseMove={handleMove}
                                     onMouseLeave={reset}
@@ -335,19 +312,19 @@ function JourneyTimeline() {
                                         duration: .35,
                                     }}
                                     className="
-          group
-          relative
-          w-[470px]
-          overflow-hidden
-          rounded-3xl
-          border
-          border-[#3A4048]
-          bg-[#2C313A]
-          p-10
-          transition-all
-          duration-500
-          hover:border-[#C778DD]
-        "
+                                        group
+                                        relative
+                                        w-[470px]
+                                        overflow-hidden
+                                        rounded-3xl
+                                        border
+                                        border-[#3A4048]
+                                        bg-[#2C313A]
+                                        p-10
+                                        transition-all
+                                        duration-500
+                                        hover:border-[#C778DD]
+                                        "
                                 >
                                     <motion.div
                                         initial={{
@@ -357,24 +334,20 @@ function JourneyTimeline() {
                                             opacity: 1,
                                         }}
                                         className="
-            pointer-events-none
-            absolute
-            inset-0
-
-            bg-gradient-to-tr
-
-            from-[#C778DD]/10
-
-            via-transparent
-
-            to-cyan-400/10
-          "
+                                        pointer-events-none
+                                        absolute
+                                        inset-0
+                                        bg-gradient-to-tr
+                                        from-[#C778DD]/10
+                                        via-transparent
+                                        to-cyan-400/10
+                                    "
                                     />
                                     <p
                                         className="
-            tracking-[8px]
-            text-[#C778DD]
-          "
+                                        tracking-[8px]
+                                        text-[#C778DD]
+                                    "
                                     >
                                         {item.year}
                                     </p>
@@ -383,29 +356,29 @@ function JourneyTimeline() {
                                             x: 6,
                                         }}
                                         className="
-            mt-5
-            text-5xl
-            font-bold
-            text-white
-          "
+                                        mt-5
+                                        text-5xl
+                                        font-bold
+                                        text-white
+                                    "
                                     >
                                         {item.title}
                                     </motion.h3>
                                     <p
                                         className="
-            mt-4
-            text-lg
-            text-[#C778DD]
-          "
+                                        mt-4
+                                        text-lg
+                                        text-[#C778DD]
+                                    "
                                     >
                                         {item.subtitle}
                                     </p>
                                     <p
                                         className="
-            mt-8
-            leading-9
-            text-[#ABB2BF]
-          "
+                                        mt-8
+                                        leading-9
+                                        text-[#ABB2BF]
+                                    "
                                     >
                                         {item.description}
                                     </p>
@@ -437,17 +410,12 @@ function JourneyTimeline() {
                                     "
                                     />
                                 </motion.div></motion.div>
-
                         );
                     })}
-
                 </div>
-
             </div>
-
         </section>
     );
-
 }
 
 export default JourneyTimeline;

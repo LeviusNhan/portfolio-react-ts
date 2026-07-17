@@ -5,15 +5,6 @@ import { useTranslation } from "react-i18next";
 import i18n from "../../../i18n/i18n";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-// const navItems = [
-//     { label: "Home", href: "#home" },
-//     { label: "Works", href: "#works" },
-//     { label: "About-me", href: "#about-me" },
-//     { label: "Contacts", href: "#contacts" },
-// ];
-
-
-
 const socialLinks = [
     {
         icon: <FaGithub size={22} />,
@@ -31,8 +22,6 @@ const socialLinks = [
         label: "Figma",
     },
 ];
-
-
 
 function Navbar() {
     const { t } = useTranslation();
@@ -63,8 +52,7 @@ function Navbar() {
             }}
             className="sticky top-0 z-50 bg-[#282C33]"
         >
-
-            <div className="navbarTheme mx-auto flex h-[61px] w-full max-w-[1024px] items-center justify-between px-4 lg:px-0">
+            <div className="navbarTheme mx-auto flex h-[61px] w-full max-w-[100%] items-center justify-between px-4 lg:px-0">
                 {/* Logo */}
                 <motion.div
                     initial={{
@@ -82,19 +70,7 @@ function Navbar() {
                 >
                     <Link
                         to="/"
-                        className="
-        group
-        flex
-        items-center
-        gap-2
-        text-base
-        font-bold
-        text-white
-        transition-all
-        duration-300
-        hover:scale-105
-        hover:text-[#C778DD]
-        "
+                        className=" group flex items-center gap-2 text-base font-bold text-white transition-all duration-300 hover:scale-105 hover:text-[#C778DD]"
                     >
                         <motion.span
                             whileHover={{
@@ -293,7 +269,6 @@ function Navbar() {
                                 </Link>
                             </li>
                         ))}
-
                         <div className="w-fit">
                             <button
                                 onClick={() => setOpenLanguage((prev) => !prev)}
@@ -302,27 +277,59 @@ function Navbar() {
                                 {language}
 
                                 <ChevronDown
-                                    size={16}
-                                    className={`transition-transform duration-300 ${openLanguage ? "rotate-180" : ""
-                                        }`}
+                                size={16}
+                                className={`transition-transform duration-300 ${
+                                    openLanguage ? "rotate-180" : ""
+                                }`}
                                 />
                             </button>
+
+                            {/* Mobile dropdown */}
+
                             <nav
                                 className={`
-                                        overflow-hidden
-                                        bg-[#282C33]
-                                        transition-all
-                                        duration-300
-                                        ease-in-out
-                                        lg:hidden
-                                        ${open
-                                        ? "max-h-[700px] opacity-100 border-t border-[#3A4048]"
-                                        : "max-h-0 opacity-0"
-                                    }
-  `}
-                            ></nav>
-                        </div>
+                                overflow-hidden
+                                bg-[#282C33]
+                                transition-all
+                                duration-300
+                                ease-in-out
 
+                                ${
+                                    openLanguage
+                                    ? "max-h-[120px] opacity-100 mt-2 border-t border-[#3A4048]"
+                                    : "max-h-0 opacity-0"
+                                }
+                                `}
+                            >
+                                {["EN", "VI"].map((lang) => (
+                                <button
+                                    key={lang}
+                                    onClick={() => {
+                                    i18n.changeLanguage(lang.toLowerCase());
+                                    setLanguage(lang);
+                                    setOpenLanguage(false);
+                                    }}
+                                    className={`
+                                    block
+                                    w-full
+                                    px-4
+                                    py-2
+                                    text-left
+                                    transition-colors
+                                    duration-300
+
+                                    ${
+                                        language === lang
+                                        ? "bg-[#3A4048] text-white"
+                                        : "text-[#ABB2BF] hover:bg-[#3A4048] hover:text-white"
+                                    }
+                                    `}
+                                >
+                                    {lang}
+                                </button>
+                                ))}
+                            </nav>
+                            </div>
                         {/* Chỉ hiện trên Mobile */}
                         <div className="border-t border-[#3A4048] pt-6 md:hidden">
                             <div className="flex justify-center gap-8 text-[#ABB2BF]">

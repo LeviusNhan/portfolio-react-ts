@@ -8,10 +8,8 @@ function Quote() {
         once: true,
         amount: .45
       }}
-      className="quoteTheme py-24"
-    >
+      className="quoteTheme py-24">
       <div className="mx-auto w-full max-w-[720px] px-4">
-
         {/* Quote Box */}
         <motion.div
           initial={{
@@ -46,7 +44,7 @@ function Quote() {
             "
           </motion.span>
 
-          <p className="text-2xl font-medium text-white overflow-hidden">
+          <p className="text-1xl font-medium text-white overflow-hidden">
 
             <motion.span
 
@@ -67,7 +65,7 @@ function Quote() {
               className="inline-block"
             >
 
-              With great power comes
+              For the benefit of ten years we must plant trees,
 
             </motion.span>
 
@@ -92,10 +90,9 @@ function Quote() {
               className="inline-block"
             >
 
-              great electricity bill
+               for the benefit of a hundred years we must cultivate people
 
             </motion.span>
-
           </p>
 
           {/* Bottom Quote */}
@@ -139,12 +136,10 @@ function Quote() {
 
             className="ml-auto border border-t-0 border-[#ABB2BF] px-6 py-3">
             <p className="text-lg text-white md:text-2xl">
-              — Dr. Who
+              —  Ho Chi Minh
             </p>
           </motion.div>
         </div>
-
-
       </div>
     </motion.section>
   );

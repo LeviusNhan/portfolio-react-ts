@@ -62,7 +62,7 @@ function AboutHero() {
 
           I'm{" "}
           <span className="text-[#C778DD]">
-            Minh.
+            Minh Nhan.
           </span>
         </motion.h1>
 
@@ -109,7 +109,8 @@ function AboutHero() {
         </motion.p>
 
         <motion.a
-          href="/cv.pdf"
+          href="./files/minhnhan-resume.pdf"
+          title="Download CV"
           download
           whileHover={{
             y: -4,

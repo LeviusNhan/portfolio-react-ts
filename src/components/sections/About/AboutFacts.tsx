@@ -7,7 +7,7 @@ const facts = [
   "Clean Code enthusiast",
   "Coffee addict ☕",
   "Always learning new technologies",
-  "Open to freelance",
+  "Open to freelance opportunities",
 ];
 
 function AboutFacts() {

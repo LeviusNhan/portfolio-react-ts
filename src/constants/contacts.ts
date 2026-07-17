@@ -1,8 +1,8 @@
 export const contacts = [
   {
     icon: "discord",
-    value: "Levius#3519",
-    href: "https://discord.com",
+    value: "Susan0175#863839206530482236",
+    href: "https://discord.com/",
   },
   {
     icon: "email",

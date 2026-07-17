@@ -17,16 +17,16 @@ const screens = [
     title: "Build",
     tab: "hero.tsx",
   },
-  {
-    step: "04",
-    title: "Refine",
-    tab: "performance.json",
-  },
-  {
-    step: "05",
-    title: "Deploy",
-    tab: "vercel.app",
-  },
+  // {
+  //   step: "04",
+  //   title: "Refine",
+  //   tab: "performance.json",
+  // },
+  // {
+  //   step: "05",
+  //   title: "Deploy",
+  //   tab: "vercel.app",
+  // },
 ];
 
 function CaseStudy() {

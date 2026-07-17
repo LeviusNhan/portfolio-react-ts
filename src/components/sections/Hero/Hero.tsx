@@ -3,7 +3,6 @@ import Shape from "../../../assets/images/Logo.svg";
 import StatusCard from "../../ui/StatusCard";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
-// import Dots from "../../../assets/images/dots.svg";
 
 function Hero() {
   const { t } = useTranslation();
@@ -151,12 +150,12 @@ function Hero() {
           src={Shape}
           alt=""
           className="
-    absolute
-    left-0
-    top-16
-    w-1/3
-    max-w-[155px]
-  "
+            absolute
+            left-0
+            top-16
+            w-1/3
+            max-w-[155px]
+          "
         />
         <motion.div
           animate={{
@@ -169,16 +168,16 @@ function Hero() {
             ease: "easeInOut",
           }}
           className="
-    absolute
-    bottom-12
-    right-10
-    h-60
-    w-60
-    rounded-full
-    bg-[#C778DD]/20
-    blur-[90px]
-    -z-10
-  "
+            absolute
+            bottom-12
+            right-10
+            h-60
+            w-60
+            rounded-full
+            bg-[#C778DD]/20
+            blur-[90px]
+            -z-10
+          "
         />
         <motion.img
           animate={{
@@ -193,26 +192,26 @@ function Hero() {
           src={Avatar}
           alt="Levius"
           className="
-    absolute
-    bottom-16
-    lg:bottom-14
-    right-0
-    w-[85%]
-    max-w-[420px]
-    md:w-full
-  "
+            absolute
+            bottom-16
+            lg:bottom-14
+            right-0
+            w-[85%]
+            max-w-[420px]
+            md:w-full
+          "
         />
         <div
           className="
-    absolute
-    bottom-10
-    -translate-x-1/2
-    lg:left-20
-    left-20
-    lg:translate-x-4
-    translate-x-4
-    z-20
-  "
+            absolute
+            bottom-10
+            -translate-x-1/2
+            lg:left-20
+            left-20
+            lg:translate-x-4
+            translate-x-4
+            z-20
+          "
         >
           <motion.div
             initial={{
@@ -232,16 +231,8 @@ function Hero() {
               text="Currently working on"
               highlight="Portfolio"
             />
-
-
           </motion.div>
         </div>
-        {/* <img
-    src={Dots}
-    alt=""
-    className="absolute right-0 top-48"
-/> */}
-
       </motion.div>
     </motion.section>
   );
